@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.DashBoardController">
+   <children>
+      <Label layoutX="29.0" layoutY="18.0" text="DashBoard">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="29.0" layoutY="76.0" onAction="#btnManageBooksOnAction" prefHeight="42.0" prefWidth="150.0" text="Books">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="415.0" layoutY="76.0" onAction="#btnManagePersonsOnAction" prefHeight="42.0" prefWidth="150.0" text="Persons">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="784.0" layoutY="76.0" onAction="#btnManageLibraiesOnAction" prefHeight="42.0" prefWidth="150.0" text="Library">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="861.0" layoutY="20.0" onAction="#btnBackOnAction" text="Back">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="MainPanel" layoutX="29.0" layoutY="121.0" prefHeight="593.0" prefWidth="906.0" style="-fx-background-color: lightGreen;" />
+   </children>
+</AnchorPane>

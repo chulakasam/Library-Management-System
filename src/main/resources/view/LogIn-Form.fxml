@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginPanel" prefHeight="730.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.LoginFormController">
+   <children>
+      <Label layoutX="71.0" layoutY="51.0" prefHeight="64.0" prefWidth="153.0" text="Log In">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="40.0" layoutY="463.0" onAction="#btnLogInOnAction" text="Log In">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <TextField layoutX="40.0" layoutY="195.0" prefHeight="50.0" prefWidth="279.0" promptText="UserName">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="40.0" layoutY="289.0" prefHeight="50.0" prefWidth="279.0" promptText="Password">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="53.0" layoutY="518.0" prefHeight="33.0" prefWidth="174.0" text="Haven't  an account   ? ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="227.0" layoutY="524.0" onAction="#btnSignInOnAction" text="Sign In ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>
