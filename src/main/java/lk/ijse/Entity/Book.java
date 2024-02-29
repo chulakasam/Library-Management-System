@@ -26,6 +26,9 @@ public class Book {
         this.status=status;
     }
 
+    public Book(String ISBN) {
+        this.ISBN=ISBN;
+    }
 
 
     public String getISBN() {

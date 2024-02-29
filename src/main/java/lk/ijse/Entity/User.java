@@ -8,14 +8,16 @@ import lombok.ToString;
 public class User {
     @Id
     private String username;
-    private  String password;
+    private String password;
+    private String email;
     public User(){
 
     }
 
-    public User(String username,String password) {
+    public User(String username,String password,String email) {
         this.username=username;
         this.password = password;
+        this.email=email;
     }
 
 
@@ -35,4 +37,11 @@ public class User {
         this.password = password;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

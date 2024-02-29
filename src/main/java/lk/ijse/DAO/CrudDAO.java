@@ -8,6 +8,6 @@ public interface CrudDAO<T> extends SuperDAO {
 
     boolean delete(String id);
 
-    Book search(String id);
+    T search(String id);
 
 }
