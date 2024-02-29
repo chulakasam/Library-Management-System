@@ -11,13 +11,22 @@ import java.io.IOException;
 public class DashBoardController {
     public AnchorPane MainPanel;
 
-    public void btnManageBooksOnAction(ActionEvent actionEvent) {
+    public void btnManageBooksOnAction(ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/Books-form.fxml"));
+        MainPanel.getChildren().clear();
+        MainPanel.getChildren().add(anchorPane);
     }
 
-    public void btnManagePersonsOnAction(ActionEvent actionEvent) {
+    public void btnManagePersonsOnAction(ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/Person-form.fxml"));
+        MainPanel.getChildren().clear();
+        MainPanel.getChildren().add(anchorPane);
     }
 
-    public void btnManageLibraiesOnAction(ActionEvent actionEvent) {
+    public void btnManageLibraiesOnAction(ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/Library-Form.fxml"));
+        MainPanel.getChildren().clear();
+        MainPanel.getChildren().add(anchorPane);
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) throws IOException {

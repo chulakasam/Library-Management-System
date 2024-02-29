@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="593.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.LibraryFormController">
+   <children>
+      <Label layoutX="62.0" layoutY="39.0" text="Library">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="652.0" layoutY="89.0" onAction="#btnAddOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: red;" text="Add">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="652.0" layoutY="157.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: green;" text="Update">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="652.0" layoutY="226.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: yellow;" text="Delete">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="653.0" layoutY="292.0" onAction="#btnSearchOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: grey;" text="Search">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtId" layoutX="62.0" layoutY="109.0" promptText="Library ID" />
+      <TextField fx:id="txtName" layoutX="62.0" layoutY="184.0" promptText="Name" />
+      <TextField fx:id="txtAddress" layoutX="62.0" layoutY="265.0" promptText="Address" />
+      <TextField fx:id="txtTel" layoutX="62.0" layoutY="338.0" promptText="Tel" />
+   </children>
+</AnchorPane>
