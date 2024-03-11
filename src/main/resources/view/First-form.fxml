@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="firstPanel" prefHeight="730.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.FirstFormController">
+   <children>
+      <JFXButton layoutX="122.0" layoutY="240.0" onAction="#btnAdminLogInOnAction" prefHeight="211.0" prefWidth="258.0" style="-fx-background-color: grey; -fx-background-radius: 35;" text="Admin">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="542.0" layoutY="240.0" onAction="#btnUserLogInOnAction" prefHeight="211.0" prefWidth="258.0" style="-fx-background-color: lightblue; -fx-background-radius: 35;" text="Users">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

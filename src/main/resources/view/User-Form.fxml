@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="UserRegPanel" prefHeight="730.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.UserFormController">
+   <children>
+      <Label layoutX="84.0" layoutY="34.0" text="User Registration">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="660.0" layoutY="102.0" prefHeight="30.0" prefWidth="126.0" text="UserID :-">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="797.0" layoutY="102.0" prefHeight="30.0" prefWidth="143.0">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="98.0" layoutY="179.0" prefHeight="40.0" prefWidth="264.0" promptText="User Name" />
+      <TextField layoutX="98.0" layoutY="241.0" prefHeight="40.0" prefWidth="264.0" promptText="NIC No" />
+      <TextField layoutX="98.0" layoutY="365.0" prefHeight="40.0" prefWidth="264.0" promptText="Email" />
+      <TextField layoutX="98.0" layoutY="427.0" prefHeight="40.0" prefWidth="264.0" promptText="Address" />
+      <TextField layoutX="98.0" layoutY="303.0" prefHeight="40.0" prefWidth="264.0" promptText="Tel No" />
+      <TextField layoutX="98.0" layoutY="488.0" prefHeight="40.0" prefWidth="264.0" promptText="Password" />
+      <JFXButton buttonType="RAISED" layoutX="98.0" layoutY="566.0" onAction="#btnRegisterOnAction" text="Register">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="289.0" layoutY="566.0" onAction="#btnSignInOnAction" text="SignIn">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
