@@ -12,17 +12,12 @@
             <Font name="System Bold" size="40.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="29.0" layoutY="76.0" onAction="#btnManageBooksOnAction" prefHeight="42.0" prefWidth="150.0" text="Books">
+      <JFXButton buttonType="RAISED" layoutX="301.0" layoutY="76.0" onAction="#btnManageBooksOnAction" prefHeight="42.0" prefWidth="150.0" text="Books">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="415.0" layoutY="76.0" onAction="#btnManagePersonsOnAction" prefHeight="42.0" prefWidth="150.0" text="Persons">
-         <font>
-            <Font name="System Bold Italic" size="18.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="784.0" layoutY="76.0" onAction="#btnManageLibraiesOnAction" prefHeight="42.0" prefWidth="150.0" text="Library">
+      <JFXButton layoutX="501.0" layoutY="76.0" onAction="#btnManageLibraiesOnAction" prefHeight="42.0" prefWidth="150.0" text="Library">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>

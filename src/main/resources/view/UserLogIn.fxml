@@ -21,12 +21,12 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <TextField layoutX="62.0" layoutY="184.0" prefHeight="37.0" prefWidth="266.0" promptText="UserName">
+      <TextField fx:id="txtUserName" layoutX="62.0" layoutY="184.0" prefHeight="37.0" prefWidth="266.0" promptText="UserName">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </TextField>
-      <TextField layoutX="62.0" layoutY="271.0" prefHeight="37.0" prefWidth="266.0" promptText="Password">
+      <TextField fx:id="txtPassword" layoutX="62.0" layoutY="271.0" prefHeight="37.0" prefWidth="266.0" promptText="Password">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>

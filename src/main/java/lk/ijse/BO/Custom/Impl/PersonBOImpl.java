@@ -13,4 +13,9 @@ public class PersonBOImpl implements PersonBO {
         Person persons = new Person(person.getUserName(), person.getNic(), person.getEmail(), person.getAddress(), person.getTel(), person.getPassword());
         return personDAO.Save(persons);
     }
+
+    @Override
+    public boolean checkPassword(String username, String password) {
+        return personDAO.checkPassword(username, password);
+    }
 }

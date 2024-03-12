@@ -44,33 +44,6 @@ public class LoginFormController {
             new Alert(Alert.AlertType.ERROR, "oops! credentials are incorrect!").show();
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     public void btnSignInOnAction(ActionEvent actionEvent) throws IOException {

@@ -6,6 +6,7 @@ import lk.ijse.Entity.Book;
 import lk.ijse.Entity.Person;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
 
 public class PersonDAOImpl implements PersonDAO {
     @Override
@@ -32,5 +33,26 @@ public class PersonDAOImpl implements PersonDAO {
     @Override
     public Person search(String id) {
         return null;
+    }
+
+    @Override
+    public boolean checkPassword(String username, String password) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+
+        Transaction transaction = session.beginTransaction();
+
+        NativeQuery<String> nativeQuery = session.createNativeQuery("SELECT password FROM Person WHERE username = :username");
+        nativeQuery.setParameter("username",username);
+
+        String pass = nativeQuery.uniqueResult();
+
+        transaction.commit();
+        session.close();
+
+        if (password.equalsIgnoreCase(pass)) {
+            return true;
+        }else {
+            return false;
+        }
     }
 }
