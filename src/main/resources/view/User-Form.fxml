@@ -3,6 +3,8 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -39,5 +41,10 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </JFXButton>
+      <ImageView fitHeight="504.0" fitWidth="508.0" layoutX="433.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assests/lms%20(2).png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

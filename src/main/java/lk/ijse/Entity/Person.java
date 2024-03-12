@@ -6,38 +6,47 @@ import jakarta.persistence.Id;
 @Entity
 public class Person {
     @Id
-    private String id;
-    private String name;
+    private String userName;
+    private String nic;
+    private String email;
     private String address;
-    private int Tel;
-    private String Regdate;
+    private String tel;
+    private String password;
 
-
-    public Person(String id, String name, String address, int tel, String regdate) {
-        this.id = id;
-        this.name = name;
+    public Person(String userName, String nic,String email, String address, String tel,String password) {
+        this.userName = userName;
+        this.nic = nic;
+        this.email=email;
         this.address = address;
-        this.Tel = tel;
-        this.Regdate = regdate;
+        this.tel = tel;
+        this.password=password;
     }
     public Person(){
 
     }
-
-    public String getId() {
-        return id;
+    @Override
+    public String toString() {
+        return userName+nic+email+address+tel+password;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getUserName() {
+        return userName;
     }
 
-    public String getName() {
-        return name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getNic() {
+        return nic;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getAddress() {
@@ -45,27 +54,22 @@ public class Person {
     }
 
     public void setAddress(String address) {
-        address = address;
+        this.address = address;
     }
 
-    public int getTel() {
-        return Tel;
+    public String getTel() {
+        return tel;
     }
 
-    public void setTel(int tel) {
-        Tel = tel;
+    public void setTel(String tel) {
+        this.tel = tel;
     }
 
-    public String getRegdate() {
-        return Regdate;
+    public String getPassword() {
+        return password;
     }
 
-    public void setRegdate(String regdate) {
-        Regdate = regdate;
-    }
-
-    @Override
-    public String toString() {
-        return id+name+address+Tel+Regdate;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

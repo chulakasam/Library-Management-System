@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -39,5 +41,15 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Hyperlink>
+      <ImageView fitHeight="561.0" fitWidth="517.0" layoutX="414.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assests/lms.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="844.0" layoutY="67.0" onAction="#btnBackOnAction" prefHeight="33.0" prefWidth="70.0" text="Exit">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
