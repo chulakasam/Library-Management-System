@@ -3,8 +3,8 @@ package lk.ijse.DAO;
 import lk.ijse.Entity.Book;
 
 public interface CrudDAO<T> extends SuperDAO {
-    boolean Save(T book);
-    boolean update(T book);
+    boolean Save(T type);
+    boolean update(T type);
 
     boolean delete(String id);
 

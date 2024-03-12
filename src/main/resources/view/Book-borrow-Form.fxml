@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="borrowBookPanel" prefHeight="730.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.BookBorrowController">
+   <children>
+      <Label layoutX="24.0" layoutY="20.0" text="Borrow Books">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbUserId" layoutX="39.0" layoutY="153.0" prefHeight="24.0" prefWidth="211.0" promptText="User ID" />
+      <JFXComboBox fx:id="cmbBranchID" layoutX="39.0" layoutY="211.0" prefHeight="24.0" prefWidth="211.0" promptText="Branch ID" />
+      <JFXComboBox fx:id="cmbISBN" layoutX="39.0" layoutY="272.0" prefHeight="24.0" prefWidth="211.0" promptText="ISBN No" />
+      <Label layoutX="329.0" layoutY="275.0" prefHeight="21.0" prefWidth="107.0" text="Book Title">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookTitle" layoutX="455.0" layoutY="271.0" prefHeight="30.0" prefWidth="189.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="626.0" layoutY="88.0" prefHeight="30.0" prefWidth="53.0" text="Date">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="714.0" layoutY="88.0" prefHeight="30.0" prefWidth="189.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="842.0" layoutY="33.0" onAction="#btnBackOnAction" text="Back">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

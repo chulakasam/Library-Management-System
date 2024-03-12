@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="userLogInPanel" prefHeight="730.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.UserLogInController">
    <children>
       <Label layoutX="62.0" layoutY="40.0" text="User LogIn">
@@ -32,5 +31,10 @@
       </TextField>
       <Label layoutX="69.0" layoutY="454.0" text="Do you haven't an account ?" />
       <Hyperlink layoutX="286.0" layoutY="451.0" onAction="#btnSignUpOnAction" text="SignUp " />
+      <JFXButton buttonType="RAISED" layoutX="833.0" layoutY="53.0" onAction="#btnExitOnAction" text="Exit">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

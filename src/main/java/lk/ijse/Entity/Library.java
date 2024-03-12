@@ -23,6 +23,10 @@ public class Library {
         this.Tel = Tel;
     }
 
+    public Library(String id) {
+        this.Id=id;
+    }
+
     public String getId() {
         return Id;
     }
