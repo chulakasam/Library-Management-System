@@ -5,28 +5,31 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Person {
-    @Id
+    
     private String userName;
+    @Id
     private String nic;
     private String email;
     private String address;
     private String tel;
     private String password;
+    private String userID;
 
-    public Person(String userName, String nic,String email, String address, String tel,String password) {
+    public Person(String userName, String nic,String email, String address, String tel,String password,String userID) {
         this.userName = userName;
         this.nic = nic;
         this.email=email;
         this.address = address;
         this.tel = tel;
         this.password=password;
+        this.userID=userID;
     }
     public Person(){
 
     }
     @Override
     public String toString() {
-        return userName+nic+email+address+tel+password;
+        return userName+nic+email+address+tel+password+userID;
     }
 
     public String getUserName() {
@@ -71,5 +74,13 @@ public class Person {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 }

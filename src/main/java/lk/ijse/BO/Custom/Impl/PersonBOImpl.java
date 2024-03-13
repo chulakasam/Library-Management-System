@@ -10,12 +10,17 @@ public class PersonBOImpl implements PersonBO {
     PersonDAO personDAO= (PersonDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOType.PERSON);
     @Override
     public boolean savePerson(Person person) {
-        Person persons = new Person(person.getUserName(), person.getNic(), person.getEmail(), person.getAddress(), person.getTel(), person.getPassword());
+        Person persons = new Person(person.getUserName(), person.getNic(), person.getEmail(), person.getAddress(), person.getTel(), person.getPassword(),person.getUserID());
         return personDAO.Save(persons);
     }
 
     @Override
     public boolean checkPassword(String username, String password) {
         return personDAO.checkPassword(username, password);
+    }
+
+    @Override
+    public String generateClientId() {
+        return personDAO.generateUserID();
     }
 }

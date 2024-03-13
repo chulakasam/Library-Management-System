@@ -3,6 +3,8 @@ package lk.ijse.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -12,6 +14,7 @@ import lk.ijse.BO.Custom.UserBO;
 import lk.ijse.Entity.Person;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class UserFormController {
 
@@ -22,6 +25,7 @@ public class UserFormController {
     public TextField txtAddress;
     public TextField txtTel;
     public TextField txtPassword;
+    public Label lblUserID;
 
     PersonBO personBO = (PersonBO) BOFactory.getBOFactory().getBO(BOFactory.BOType.PERSON);
     public void btnRegisterOnAction(ActionEvent actionEvent) {
@@ -31,8 +35,9 @@ public class UserFormController {
         String address = txtAddress.getText();
         String tel = txtTel.getText();
         String password = txtPassword.getText();
+        String id = lblUserID.getText();
 
-        Person person = new Person(name, nic, email, address, tel, password);
+        Person person = new Person(name, nic, email, address, tel, password,id);
         personBO.savePerson(person);
     }
 
@@ -41,5 +46,12 @@ public class UserFormController {
         Scene scene = new Scene(anchorPane);
         Stage stage = (Stage) UserRegPanel.getScene().getWindow();
         stage.setScene(scene);
+    }
+    public void  initialize(){
+      generateClientId();
+    }
+    private void generateClientId() {
+        String id =personBO.generateClientId();
+        lblUserID.setText(id);
     }
 }

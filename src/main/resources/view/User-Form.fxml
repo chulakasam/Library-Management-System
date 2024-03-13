@@ -20,7 +20,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="797.0" layoutY="102.0" prefHeight="30.0" prefWidth="143.0">
+      <Label fx:id="lblUserID" layoutX="797.0" layoutY="102.0" prefHeight="30.0" prefWidth="143.0">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
