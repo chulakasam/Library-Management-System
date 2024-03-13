@@ -3,24 +3,43 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="bookPanel" prefHeight="593.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.BooksFormController">
    <children>
-      <JFXButton layoutX="668.0" layoutY="75.0" onAction="#btnSaveOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: red;" text="Add" />
-      <JFXButton layoutX="668.0" layoutY="163.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: yellow;" text="Update" />
-      <JFXButton layoutX="668.0" layoutY="239.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: green;" text="Delete" />
-      <JFXButton layoutX="668.0" layoutY="319.0" onAction="#btnSearchOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: grey;" text="Search" />
-      <TextField fx:id="txtId" layoutX="92.0" layoutY="96.0" promptText="ISBN No" />
-      <TextField fx:id="txtName" layoutX="92.0" layoutY="175.0" promptText="Title" />
-      <TextField fx:id="txtAuthor" layoutX="92.0" layoutY="251.0" promptText="Author" />
-      <TextField fx:id="txtGenre" layoutX="92.0" layoutY="325.0" promptText="Genre" />
-      <TextField fx:id="txtStatus" layoutX="92.0" layoutY="400.0" promptText="Status" />
+      <JFXButton buttonType="RAISED" layoutX="92.0" layoutY="489.0" onAction="#btnSaveOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: red;" text="Add">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="258.0" layoutY="489.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: yellow;" text="Update">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="423.0" layoutY="489.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: green;" text="Delete">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="423.0" layoutY="95.0" onAction="#btnSearchOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: grey;" text="Search">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <TextField fx:id="txtId" layoutX="92.0" layoutY="96.0" prefHeight="49.0" prefWidth="247.0" promptText="ISBN No" />
+      <TextField fx:id="txtName" layoutX="92.0" layoutY="175.0" prefHeight="49.0" prefWidth="247.0" promptText="Title" />
+      <TextField fx:id="txtAuthor" layoutX="92.0" layoutY="251.0" prefHeight="49.0" prefWidth="247.0" promptText="Author" />
+      <TextField fx:id="txtGenre" layoutX="92.0" layoutY="325.0" prefHeight="49.0" prefWidth="247.0" promptText="Genre" />
+      <TextField fx:id="txtStatus" layoutX="92.0" layoutY="400.0" prefHeight="49.0" prefWidth="247.0" promptText="Status" />
       <Label layoutX="92.0" layoutY="36.0" prefHeight="39.0" prefWidth="171.0" text="Books">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
+      <ImageView fitHeight="337.0" fitWidth="367.0" layoutX="520.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assests/lms.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
