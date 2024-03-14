@@ -78,4 +78,11 @@ public class UserLogInController {
         Stage stage = (Stage) userLogInPanel.getScene().getWindow();
         stage.setScene(scene);
     }
+
+    public void btnForgotPasswordOnAction(ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/Change-passwordForm.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = (Stage) userLogInPanel.getScene().getWindow();
+        stage.setScene(scene);
+    }
 }

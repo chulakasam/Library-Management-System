@@ -22,6 +22,11 @@ public class PersonDAOImpl implements PersonDAO {
 
     @Override
     public boolean update(Person person) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        session.update(person);
+        transaction.commit();
+        session.close();
         return false;
     }
 
@@ -32,7 +37,12 @@ public class PersonDAOImpl implements PersonDAO {
 
     @Override
     public Person search(String id) {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        Person person = session.get(Person.class, id);
+        transaction.commit();
+        session.close();
+        return person;
     }
 
     @Override

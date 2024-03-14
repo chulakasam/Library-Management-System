@@ -27,6 +27,12 @@ public class Person {
     public Person(){
 
     }
+    public Person(String nic,String userName,String newPw) {
+        this.nic=nic;
+        this.userName=userName;
+        this.password=newPw;
+    }
+
     @Override
     public String toString() {
         return userName+nic+email+address+tel+password+userID;

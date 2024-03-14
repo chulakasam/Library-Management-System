@@ -23,4 +23,15 @@ public class PersonBOImpl implements PersonBO {
     public String generateClientId() {
         return personDAO.generateUserID();
     }
+
+    @Override
+    public Person searchPerson(String searchId) {
+        return personDAO.search(searchId);
+    }
+
+    @Override
+    public boolean changePassword(Person person) {
+        Person person1 = new Person(person.getNic(),person.getUserName(),person.getTel(),person.getEmail(), person.getAddress(), person.getPassword(), person.getUserID());
+        return personDAO.update(person1);
+    }
 }
