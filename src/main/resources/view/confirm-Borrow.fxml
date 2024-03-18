@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.SearchFormController">
+   <children>
+      <TextField fx:id="txtUsername" layoutX="48.0" layoutY="222.0" prefHeight="41.0" prefWidth="252.0" promptText="Username" style="-fx-background-radius: 10px;" />
+      <TextField fx:id="txtTitle" layoutX="48.0" layoutY="296.0" prefHeight="41.0" prefWidth="252.0" promptText="Book Title" style="-fx-background-radius: 10px;" />
+      <JFXButton buttonType="RAISED" layoutX="447.0" layoutY="337.0" onAction="#btnConfirmOnAction" prefHeight="41.0" prefWidth="103.0" style="-fx-background-color: #1abc9c; -fx-background-radius: 10px;" text="Confirm">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Ubuntu Mono Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtID" layoutX="48.0" layoutY="140.0" prefHeight="47.0" prefWidth="252.0" promptText="Enter the Borrow ID" />
+      <Label layoutX="48.0" layoutY="48.0" prefHeight="30.0" prefWidth="376.0" text="Book Borrow Confirmation">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="159.0" fitWidth="225.0" layoutX="341.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assests/lms9.png" />
+         </image>
+      </ImageView>
+      <Line endX="353.0" layoutX="141.0" layoutY="93.0" startX="-100.0" />
+   </children>
+</AnchorPane>

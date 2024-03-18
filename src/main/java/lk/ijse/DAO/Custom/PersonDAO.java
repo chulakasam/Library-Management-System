@@ -8,4 +8,5 @@ public interface PersonDAO extends CrudDAO<Person> {
 
     String generateUserID();
 
+    String get(String username);
 }

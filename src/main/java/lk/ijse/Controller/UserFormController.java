@@ -20,24 +20,19 @@ public class UserFormController {
 
     public AnchorPane UserRegPanel;
     public TextField txtUserName;
-    public TextField txtNIC;
     public TextField txtEmail;
-    public TextField txtAddress;
-    public TextField txtTel;
     public TextField txtPassword;
     public Label lblUserID;
+    public TextField txtConfirmPassword;
 
     PersonBO personBO = (PersonBO) BOFactory.getBOFactory().getBO(BOFactory.BOType.PERSON);
-    public void btnRegisterOnAction(ActionEvent actionEvent) {
-        String name = txtUserName.getText();
-        String nic = txtNIC.getText();
-        String email = txtEmail.getText();
-        String address = txtAddress.getText();
-        String tel = txtTel.getText();
-        String password = txtPassword.getText();
+    public void btnRegisterOnAction(ActionEvent actionEvent) throws SQLException {
         String id = lblUserID.getText();
+        String name = txtUserName.getText();
+        String password = txtPassword.getText();
+        String confirmPassword = txtConfirmPassword.getText();
 
-        Person person = new Person(name, nic, email, address, tel, password,id);
+        Person person = new Person(id,name,password,confirmPassword);
         personBO.savePerson(person);
     }
 

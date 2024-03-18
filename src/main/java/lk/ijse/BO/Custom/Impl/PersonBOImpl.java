@@ -4,13 +4,16 @@ import lk.ijse.BO.Custom.PersonBO;
 import lk.ijse.DAO.Custom.PersonDAO;
 import lk.ijse.DAO.Custom.UserDAO;
 import lk.ijse.DAO.DAOFactory.DAOFactory;
+import lk.ijse.DTO.PersonDTO;
 import lk.ijse.Entity.Person;
+
+import java.sql.SQLException;
 
 public class PersonBOImpl implements PersonBO {
     PersonDAO personDAO= (PersonDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOType.PERSON);
     @Override
-    public boolean savePerson(Person person) {
-        Person persons = new Person(person.getUserName(), person.getNic(), person.getEmail(), person.getAddress(), person.getTel(), person.getPassword(),person.getUserID());
+    public boolean savePerson(Person person) throws SQLException {
+        Person persons = new Person(person.getuId(),person.getUserName(),person.getPassword(),person.getConfirmPassword());
         return personDAO.Save(persons);
     }
 
@@ -31,7 +34,22 @@ public class PersonBOImpl implements PersonBO {
 
     @Override
     public boolean changePassword(Person person) {
-        Person person1 = new Person(person.getNic(),person.getUserName(),person.getTel(),person.getEmail(), person.getAddress(), person.getPassword(), person.getUserID());
-        return personDAO.update(person1);
+        Person person1 = new Person(person.getuId(),person.getUserName(),person.getPassword(),person.getConfirmPassword());
+        try {
+            return personDAO.update(person1);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public PersonDTO getUserId(String username) throws SQLException {
+        String user = personDAO.get(username);
+        if(user != null){
+            PersonDTO userDto = new PersonDTO(user);
+            return userDto;
+        }else {
+            return null;
+        }
     }
 }

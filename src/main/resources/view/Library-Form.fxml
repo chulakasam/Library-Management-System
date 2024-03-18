@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -30,19 +33,29 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="409.0" layoutY="109.0" onAction="#btnSearchOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: grey;" text="Search">
+      <JFXButton layoutX="62.0" layoutY="521.0" onAction="#btnSearchOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: grey;" text="Search">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </JFXButton>
       <TextField fx:id="txtId" layoutX="62.0" layoutY="109.0" prefHeight="49.0" prefWidth="247.0" promptText="Library ID" />
-      <TextField fx:id="txtName" layoutX="62.0" layoutY="184.0" prefHeight="49.0" prefWidth="247.0" promptText="Name" />
-      <TextField fx:id="txtAddress" layoutX="62.0" layoutY="265.0" prefHeight="49.0" prefWidth="247.0" promptText="Address" />
-      <TextField fx:id="txtTel" layoutX="62.0" layoutY="345.0" prefHeight="49.0" prefWidth="247.0" promptText="Tel" />
-      <ImageView fitHeight="363.0" fitWidth="343.0" layoutX="517.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="txtAddress" layoutX="62.0" layoutY="185.0" prefHeight="49.0" prefWidth="247.0" promptText="Address" />
+      <ImageView fitHeight="363.0" fitWidth="343.0" layoutX="517.0" layoutY="148.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Assests/lms.png" />
          </image>
       </ImageView>
+      <JFXComboBox fx:id="cmbStatus" layoutX="62.0" layoutY="308.0" prefHeight="39.0" prefWidth="247.0" promptText="Open Or Closed" />
+      <JFXComboBox fx:id="cmbAdmin" layoutX="62.0" layoutY="388.0" prefHeight="39.0" prefWidth="247.0" promptText="Admin" />
+      <TableView fx:id="tblBranch" layoutX="353.0" layoutY="101.0" opacity="0.59" prefHeight="325.0" prefWidth="527.0">
+        <columns>
+          <TableColumn fx:id="colLibraryID" prefWidth="91.0" text="Library ID" />
+          <TableColumn fx:id="colAddress" minWidth="0.0" prefWidth="112.0" text="Address" />
+            <TableColumn fx:id="colQty" minWidth="0.0" prefWidth="118.0" text="Books Qty" />
+            <TableColumn fx:id="colStatus" minWidth="0.0" prefWidth="101.0" text="Status" />
+            <TableColumn fx:id="colAdminID" minWidth="0.0" prefWidth="104.0" text="Admin Id" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtBookQty" layoutX="65.0" layoutY="264.0" prefHeight="24.0" prefWidth="247.0" promptText="Book Qty" />
    </children>
 </AnchorPane>

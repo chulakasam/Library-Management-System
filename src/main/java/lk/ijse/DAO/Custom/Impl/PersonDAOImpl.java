@@ -7,6 +7,9 @@ import lk.ijse.Entity.Person;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.NativeQuery;
+import org.hibernate.query.Query;
+
+import java.util.List;
 
 public class PersonDAOImpl implements PersonDAO {
     @Override
@@ -18,6 +21,16 @@ public class PersonDAOImpl implements PersonDAO {
         transaction.commit();
         session.close();
         return false;
+    }
+
+    @Override
+    public List<Person> getAll() {
+        return null;
+    }
+
+    @Override
+    public Person exists(String title) {
+        return null;
     }
 
     @Override
@@ -36,6 +49,11 @@ public class PersonDAOImpl implements PersonDAO {
     }
 
     @Override
+    public String getCount() {
+        return null;
+    }
+
+    @Override
     public Person search(String id) {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
@@ -51,7 +69,7 @@ public class PersonDAOImpl implements PersonDAO {
 
         Transaction transaction = session.beginTransaction();
 
-        NativeQuery<String> nativeQuery = session.createNativeQuery("SELECT password FROM Person WHERE username = :username");
+        NativeQuery<String> nativeQuery = session.createNativeQuery("SELECT password FROM person WHERE username = :username");
         nativeQuery.setParameter("username",username);
 
         String pass = nativeQuery.uniqueResult();
@@ -70,7 +88,7 @@ public class PersonDAOImpl implements PersonDAO {
     public String generateUserID() {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        NativeQuery<String> nativeQuery = session.createNativeQuery("SELECT userID FROM Person ORDER BY userID DESC LIMIT 1");
+        NativeQuery<String> nativeQuery = session.createNativeQuery("SELECT uId FROM person ORDER BY uId DESC LIMIT 1");
         String id = nativeQuery.uniqueResult();
         transaction.commit();
         session.close();
@@ -92,6 +110,23 @@ public class PersonDAOImpl implements PersonDAO {
             }
         } else {
             return "U001";
+        }
+    }
+
+    @Override
+    public String get(String username) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        transaction.commit();
+        try{
+            Query query = session.createQuery("select uId from person where userName = :userName");
+            query.setParameter("userName",username);
+            return (String) query.uniqueResult();
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }finally {
+            session.close();
         }
     }
 }

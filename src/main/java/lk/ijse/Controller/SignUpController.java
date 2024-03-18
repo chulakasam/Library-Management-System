@@ -11,6 +11,7 @@ import lk.ijse.BO.Custom.UserBO;
 import lk.ijse.Entity.User;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class SignUpController {
     public AnchorPane SignInPanel;
@@ -20,7 +21,7 @@ public class SignUpController {
     public TextField txtConfirmPassword;
 
     UserBO userBO = (UserBO) BOFactory.getBOFactory().getBO(BOFactory.BOType.USER);
-    public void btnRegisterOnAction(ActionEvent actionEvent) {
+    public void btnRegisterOnAction(ActionEvent actionEvent) throws SQLException {
         String username = txtUserName.getText();
         String email = txtEmail.getText();
         String password = txtPassword.getText();

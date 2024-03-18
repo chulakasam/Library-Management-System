@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="580.0" prefWidth="740.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.userBookController">
+   <children>
+      <AnchorPane layoutX="51.0" layoutY="190.0" prefHeight="373.0" prefWidth="416.0">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="277.0" layoutY="304.0" onAction="#btnBorrowOnAction" prefHeight="46.0" prefWidth="125.0" style="-fx-background-color: lightpink;" text="Borrow">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></JFXButton>
+            <Label fx:id="lblStatus" layoutX="103.0" layoutY="271.0" prefHeight="38.0" prefWidth="137.0" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtSearchBook" layoutX="67.0" layoutY="73.0" prefHeight="30.0" prefWidth="254.0" promptText="Search Book" />
+      <JFXButton buttonType="RAISED" layoutX="359.0" layoutY="73.0" onAction="#btnSearchOnAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-radius: 5px; -fx-background-color: #2980b9;" text="Search" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Ubuntu Mono Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="67.0" layoutY="30.0" text="Search book">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font></Label>
+      <Label layoutX="73.0" layoutY="135.0" prefHeight="30.0" prefWidth="199.0" text="Search Details">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Label layoutX="67.0" layoutY="216.0" prefHeight="32.0" prefWidth="105.0" text="Book ID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="332.0" prefHeight="32.0" prefWidth="105.0" text="Author:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="393.0" prefHeight="32.0" prefWidth="105.0" text="Genre:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="274.0" prefHeight="32.0" prefWidth="105.0" text="Book Name:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="461.0" prefHeight="32.0" prefWidth="105.0" text="Status:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookId" layoutX="198.0" layoutY="216.0" prefHeight="32.0" prefWidth="199.0">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></Label>
+      <Label fx:id="lblBookName" layoutX="198.0" layoutY="274.0" prefHeight="32.0" prefWidth="199.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="lblAuthor" layoutX="206.0" layoutY="340.0" prefHeight="32.0" prefWidth="180.0">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></Label>
+      <Label fx:id="lblGenre" layoutX="161.0" layoutY="393.0" prefHeight="32.0" prefWidth="270.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

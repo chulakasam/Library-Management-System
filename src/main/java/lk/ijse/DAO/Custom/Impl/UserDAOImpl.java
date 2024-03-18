@@ -8,6 +8,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.NativeQuery;
 
+import java.util.List;
+
 public class UserDAOImpl implements UserDAO {
     @Override
     public boolean Save(User user) {
@@ -21,6 +23,16 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
+    public List<User> getAll() {
+        return null;
+    }
+
+    @Override
+    public User exists(String title) {
+        return null;
+    }
+
+    @Override
     public boolean update(User user) {
         return false;
     }
@@ -28,6 +40,11 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public boolean delete(String id) {
         return false;
+    }
+
+    @Override
+    public String getCount() {
+        return null;
     }
 
     @Override
@@ -41,7 +58,7 @@ public class UserDAOImpl implements UserDAO {
 
         Transaction transaction = session.beginTransaction();
 
-        NativeQuery<String> nativeQuery = session.createNativeQuery("SELECT password FROM User WHERE username = :username");
+        NativeQuery<String> nativeQuery = session.createNativeQuery("SELECT password FROM user WHERE userName = :username");
         nativeQuery.setParameter("username",username);
 
         String pass = nativeQuery.uniqueResult();

@@ -1,18 +1,19 @@
 package lk.ijse.BO.Custom;
 
 import lk.ijse.DAO.SuperDAO;
+import lk.ijse.DTO.BranchDTO;
 import lk.ijse.Entity.Library;
+
+import java.sql.SQLException;
+import java.util.List;
 
 public interface LibraryBO extends SuperDAO {
 
-
-
-    boolean saveLibrary(Library library);
-
-    boolean deleteLibrary(String id);
-
-    Library searchLibrary(String id);
-
-    boolean updateLibrary(Library library);
+    boolean saveBranch(BranchDTO dto) throws SQLException;
+    List<BranchDTO> getAllBranches();
+    BranchDTO search(String Id);
+    boolean updateBranch(BranchDTO dto) throws SQLException;
+    boolean deleteBranch(String Id) throws SQLException;
+    String getBranchCount() throws SQLException;
 }
 

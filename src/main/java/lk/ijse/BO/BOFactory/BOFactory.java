@@ -1,9 +1,6 @@
 package lk.ijse.BO.BOFactory;
 
-import lk.ijse.BO.Custom.Impl.BookBOImpl;
-import lk.ijse.BO.Custom.Impl.LibraryBOImpl;
-import lk.ijse.BO.Custom.Impl.PersonBOImpl;
-import lk.ijse.BO.Custom.Impl.UserBOImpl;
+import lk.ijse.BO.Custom.Impl.*;
 import lk.ijse.DAO.SuperDAO;
 
 public class BOFactory {
@@ -22,7 +19,7 @@ public class BOFactory {
     }
 
     public enum BOType {
-        BOOK,USER,PERSON,LIBRARY;
+        BOOK,USER,PERSON,LIBRARY,BORROWBOOK;
 
     }
 
@@ -36,6 +33,8 @@ public class BOFactory {
                     return new PersonBOImpl();
                 case LIBRARY:
                    return new LibraryBOImpl();
+                   case BORROWBOOK:
+                   return new BorrowBookBOImpl();
                 default:
                     return null;
         }

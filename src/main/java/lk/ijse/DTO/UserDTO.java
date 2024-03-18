@@ -1,29 +1,30 @@
-package lk.ijse.Entity;
+package lk.ijse.DTO;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import lombok.ToString;
-import org.hibernate.annotations.GenericGenerator;
-
-@Entity(name = "user")
-public class User {
-   @Id
-//    @GeneratedValue(generator = "Admin-Id-Generator")
-//    @GenericGenerator(name = "Admin-Id-Generator", strategy = "lk.ijse.util.AdminIdGenerator")
+public class UserDTO {
     private String adminId;
     private String userName;
     private String password;
     private String confirmPassword;
 
-    public User() {
+    public UserDTO() {
     }
 
-    public User(String adminId, String userName, String password, String confirmPassword) {
+    public UserDTO(String adminId, String userName, String password, String confirmPassword) {
         this.adminId = adminId;
         this.userName = userName;
         this.password = password;
         this.confirmPassword = confirmPassword;
+    }
+
+    public UserDTO(String userName, String password, String confirmPassword) {
+        this.userName = userName;
+        this.password = password;
+        this.confirmPassword = confirmPassword;
+    }
+
+    public UserDTO(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
     }
 
     public String getAdminId() {
@@ -60,7 +61,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "Admin{" +
+        return "AdminDto{" +
                 "adminId='" + adminId + '\'' +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +

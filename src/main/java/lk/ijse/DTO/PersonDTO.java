@@ -1,37 +1,42 @@
-package lk.ijse.Entity;
+package lk.ijse.DTO;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import lombok.ToString;
-import org.hibernate.annotations.GenericGenerator;
-
-@Entity(name = "user")
-public class User {
-   @Id
-//    @GeneratedValue(generator = "Admin-Id-Generator")
-//    @GenericGenerator(name = "Admin-Id-Generator", strategy = "lk.ijse.util.AdminIdGenerator")
-    private String adminId;
+public class PersonDTO {
+    private String uId;
     private String userName;
     private String password;
     private String confirmPassword;
 
-    public User() {
+    public PersonDTO() {
     }
 
-    public User(String adminId, String userName, String password, String confirmPassword) {
-        this.adminId = adminId;
+    public PersonDTO(String uId, String userName, String password, String confirmPassword) {
+        this.uId = uId;
         this.userName = userName;
         this.password = password;
         this.confirmPassword = confirmPassword;
     }
 
-    public String getAdminId() {
-        return adminId;
+    public PersonDTO(String userName, String password, String confirmPassword) {
+        this.userName = userName;
+        this.password = password;
+        this.confirmPassword = confirmPassword;
     }
 
-    public void setAdminId(String adminId) {
-        this.adminId = adminId;
+    public PersonDTO(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
+
+    public PersonDTO(String uId) {
+        this.uId = uId;
+    }
+
+    public String getuId() {
+        return uId;
+    }
+
+    public void setuId(String uId) {
+        this.uId = uId;
     }
 
     public String getUserName() {
@@ -60,8 +65,8 @@ public class User {
 
     @Override
     public String toString() {
-        return "Admin{" +
-                "adminId='" + adminId + '\'' +
+        return "UserDto{" +
+                "uId='" + uId + '\'' +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", confirmPassword='" + confirmPassword + '\'' +

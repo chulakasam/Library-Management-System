@@ -1,16 +1,30 @@
 package lk.ijse.BO.Custom;
 
 import lk.ijse.DAO.SuperDAO;
+import lk.ijse.DTO.BookDTO;
 import lk.ijse.Entity.Book;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public interface BookBO extends SuperDAO {
-    boolean saveBook(Book books) throws SQLException, ClassNotFoundException;
+    boolean saveBook(BookDTO dto) throws SQLException;
 
-    boolean deleteBook(String id);
+    List<BookDTO> getAllBooks();
 
-    Book searchBook(String id);
+    BookDTO existsBook(String title);
 
-    boolean updateBook(Book books);
+    boolean updateBook(BookDTO dto) throws SQLException;
+
+    boolean deleteBook(String title) throws SQLException;
+
+    String getBookCount() throws SQLException;
+
+    BookDTO searchBook(String title);
+
+    BookDTO getBookId(String title);
+
+    boolean updateBookStatus(BookDTO dto) throws SQLException;
+
+    public BookDTO getBookWithBorrowedBooks(String bookId);
 }

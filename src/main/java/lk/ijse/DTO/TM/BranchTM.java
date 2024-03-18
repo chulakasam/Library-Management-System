@@ -1,31 +1,30 @@
-package lk.ijse.Entity;
+package lk.ijse.DTO.TM;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import lombok.ToString;
-import org.hibernate.annotations.GenericGenerator;
+import lombok.*;
 
-@Entity(name = "library")
-public class Library {
-    @Id
-//    @GeneratedValue(generator = "Branch-Id-Generator")
-//    @GenericGenerator(name = "Branch-Id-Generator", strategy = "lk.ijse.util.BranchIdGenerator")
+public class BranchTM {
     private String bId;
     private String address;
     private String bNumber;
     private String status;
     private String adminId;
 
-    public Library() {
+    public BranchTM() {
     }
 
-    public Library(String bId, String address, String bNumber, String status, String adminId) {
+    public BranchTM(String bId, String address, String bNumber, String status, String adminId) {
         this.bId = bId;
         this.address = address;
         this.bNumber = bNumber;
         this.status = status;
         this.adminId = adminId;
+    }
+
+    public BranchTM(String bId, String address, String bNumber, String status) {
+        this.bId = bId;
+        this.address = address;
+        this.bNumber = bNumber;
+        this.status = status;
     }
 
     public String getbId() {
@@ -70,7 +69,7 @@ public class Library {
 
     @Override
     public String toString() {
-        return "Branch{" +
+        return "BranchDto{" +
                 "bId='" + bId + '\'' +
                 ", address='" + address + '\'' +
                 ", bNumber='" + bNumber + '\'' +

@@ -1,37 +1,27 @@
-package lk.ijse.Entity;
+package lk.ijse.DTO.TM;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import lombok.ToString;
-import org.hibernate.annotations.GenericGenerator;
-
-@Entity(name = "user")
-public class User {
-   @Id
-//    @GeneratedValue(generator = "Admin-Id-Generator")
-//    @GenericGenerator(name = "Admin-Id-Generator", strategy = "lk.ijse.util.AdminIdGenerator")
-    private String adminId;
+public class UserTm {
+    private String uId;
     private String userName;
     private String password;
     private String confirmPassword;
 
-    public User() {
+    public UserTm() {
     }
 
-    public User(String adminId, String userName, String password, String confirmPassword) {
-        this.adminId = adminId;
+    public UserTm(String uId, String userName, String password, String confirmPassword) {
+        this.uId = uId;
         this.userName = userName;
         this.password = password;
         this.confirmPassword = confirmPassword;
     }
 
-    public String getAdminId() {
-        return adminId;
+    public String getuId() {
+        return uId;
     }
 
-    public void setAdminId(String adminId) {
-        this.adminId = adminId;
+    public void setuId(String uId) {
+        this.uId = uId;
     }
 
     public String getUserName() {
@@ -60,8 +50,8 @@ public class User {
 
     @Override
     public String toString() {
-        return "Admin{" +
-                "adminId='" + adminId + '\'' +
+        return "UserTm{" +
+                "uId='" + uId + '\'' +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", confirmPassword='" + confirmPassword + '\'' +

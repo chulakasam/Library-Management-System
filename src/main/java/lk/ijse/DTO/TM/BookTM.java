@@ -1,44 +1,23 @@
-package lk.ijse.Entity;
+package lk.ijse.DTO.TM;
 
-import jakarta.persistence.*;
-import org.hibernate.annotations.GenericGenerator;
+import lombok.*;
 
-import java.util.List;
 
-@Entity(name = "book")
-public class Book {
-    @Id
-//    @GeneratedValue(generator = "Book-Id-Generator")
-//    @GenericGenerator(name = "Book-Id-Generator", strategy = "lk.ijse.util.BookIdGenerator")
+public class BookTM {
     private String bId;
     private String title;
     private String author;
     private String genre;
     private String status;
-    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<BorrowBooks> borrowedBooks;
 
-    public Book() {
+    public BookTM() {
     }
 
-    public Book(String bId, String title, String author, String genre, String status, List<BorrowBooks> borrowedBooks) {
+    public BookTM(String bId, String title, String author, String genre, String status) {
         this.bId = bId;
         this.title = title;
         this.author = author;
         this.genre = genre;
-        this.status = status;
-        this.borrowedBooks = borrowedBooks;
-    }
-
-    public Book(String bId, String title, String author, String genre, String status) {
-        this.bId = bId;
-        this.title = title;
-        this.author = author;
-        this.genre = genre;
-        this.status = status;
-    }
-
-    public Book(String status) {
         this.status = status;
     }
 
@@ -82,23 +61,14 @@ public class Book {
         this.status = status;
     }
 
-    public List<BorrowBooks> getBorrowedBooks() {
-        return borrowedBooks;
-    }
-
-    public void setBorrowedBooks(List<BorrowBooks> borrowedBooks) {
-        this.borrowedBooks = borrowedBooks;
-    }
-
     @Override
     public String toString() {
-        return "Book{" +
+        return "BookTm{" +
                 "bId='" + bId + '\'' +
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", genre='" + genre + '\'' +
                 ", status='" + status + '\'' +
-                ", borrowedBooks=" + borrowedBooks +
                 '}';
     }
 }

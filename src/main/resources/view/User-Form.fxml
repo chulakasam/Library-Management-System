@@ -26,11 +26,9 @@
          </font>
       </Label>
       <TextField fx:id="txtUserName" layoutX="98.0" layoutY="179.0" prefHeight="40.0" prefWidth="264.0" promptText="User Name" />
-      <TextField fx:id="txtNIC" layoutX="98.0" layoutY="241.0" prefHeight="40.0" prefWidth="264.0" promptText="NIC No" />
-      <TextField fx:id="txtEmail" layoutX="98.0" layoutY="365.0" prefHeight="40.0" prefWidth="264.0" promptText="Email" />
-      <TextField fx:id="txtAddress" layoutX="98.0" layoutY="427.0" prefHeight="40.0" prefWidth="264.0" promptText="Address" />
-      <TextField fx:id="txtTel" layoutX="98.0" layoutY="303.0" prefHeight="40.0" prefWidth="264.0" promptText="Tel No" />
-      <TextField fx:id="txtPassword" layoutX="98.0" layoutY="488.0" prefHeight="40.0" prefWidth="264.0" promptText="Password" />
+      <TextField fx:id="txtEmail" layoutX="98.0" layoutY="250.0" prefHeight="40.0" prefWidth="264.0" promptText="Email" />
+      <TextField fx:id="txtConfirmPassword" layoutX="98.0" layoutY="389.0" prefHeight="40.0" prefWidth="264.0" promptText="confirmPw" />
+      <TextField fx:id="txtPassword" layoutX="98.0" layoutY="325.0" prefHeight="40.0" prefWidth="264.0" promptText="Password" />
       <JFXButton buttonType="RAISED" layoutX="98.0" layoutY="566.0" onAction="#btnRegisterOnAction" text="Register">
          <font>
             <Font name="System Bold" size="24.0" />
